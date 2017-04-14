@@ -1,0 +1,243 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #23043f;
+}
+body {
+  font-family: PingFang;
+  position: relative;
+}
+body.modal {
+  height: 100%;
+  overflow: hidden;
+}
+.cm-toast {
+  position: fixed;
+  left: 0;
+  bottom: 8%;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+.cm-toast .cm-toast-main {
+  display: inline-block;
+  max-width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+  word-wrap: break-word;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  min-width: 60px;
+}
+.modal-in {
+  display: none;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.modal-in .msg-small {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 4rem;
+  height: 2.6rem;
+  border-radius: .2rem;
+  overflow: hidden;
+}
+.modal-in .msg-small .modal-msg {
+  font-size: .24rem;
+  text-align: center;
+}
+.modal-in .msg-small .modal-msg .msg {
+  height: auto;
+  color: #ffffff;
+  padding: .55rem .3rem;
+  background: #FFA109;
+}
+.modal-in .msg-small .modal-msg button {
+  font-size: .3rem;
+  text-align: center;
+  width: 100%;
+  height: .8rem;
+  border: none;
+  background: #ffffff;
+  outline: none;
+  color: #FFA109;
+}
+.modal-in .question,
+.modal-in .answer {
+  text-align: left;
+}
+.modal-in .answer label {
+  font-size: .28rem;
+}
+.modal-in .answer input {
+  margin-left: .3rem;
+}
+.modal-in .msg-li {
+  width: 100%;
+  height: auto;
+  margin-top: .3rem;
+}
+.modal-in .msg-big {
+  display: none;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.1rem;
+  height: auto;
+  border-radius: .2rem;
+}
+.modal-in .msg-big .msg-title {
+  position: absolute;
+  top: -1.8rem;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+  font-size: .4rem;
+  color: #ffffff;
+  height: 3.28rem;
+  background: url("../images/congra.png") no-repeat;
+  background-size: 100% auto;
+  line-height: 3.2rem;
+}
+.modal-in .msg-big .modal-msg {
+  margin: auto;
+  padding-bottom: .3rem;
+  width: 80%;
+  background: #FFE5BB;
+  border-radius: .2rem;
+}
+.modal-in .msg-big .modal-msg .msg {
+  padding-top: 1rem;
+  padding-left: .4rem;
+  padding-right: .4rem;
+  height: auto;
+  font-size: .3rem;
+  color: #6F0000;
+  text-align: center;
+}
+.modal-in .msg-big .modal-msg .modal-foot {
+  padding-left: .3rem;
+}
+.modal-in .msg-big .modal-msg .modal-foot a {
+  color: #6F0000 ;
+  font-size: .28rem;
+  margin-right: .3rem;
+}
+.modal-in .msg-big .modal-msg .modal-foot button {
+  width: 2.91rem;
+  height: .88rem;
+  font-size: .4rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background: url("../images/radius.png") no-repeat;
+  background-size: 100% 100%;
+}
+.container {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  background: url('../images/main_bg.jpg') no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 1rem;
+}
+.container .top-header {
+  padding: .6rem 1rem .1rem 1rem;
+}
+.container .top-header img {
+  width: 100%;
+}
+.container #my-award {
+  margin: .3rem .6rem;
+  padding: .15rem;
+  text-align: center;
+  color: #fff;
+  font-size: .3rem;
+  line-height: .4rem;
+}
+.container #my-award span {
+  color: #ffa109;
+}
+.container #my-award #award-tips {
+  color: #fff;
+  font-size: .16rem;
+  line-height: .3rem;
+}
+.container .award-con {
+  position: relative;
+  width: 6.5rem;
+  height: 6.5rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.container .award-con .award-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.container .award-con .award-pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  -webkit-transform: translate(-50%, -55%);
+  -moz-transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
+}
+.container .award-con .award-rule {
+  position: absolute;
+  right: .3rem;
+  top: .2rem ;
+  font-size: .24rem;
+  color: #ffc027;
+}
+.container .award-panel {
+  position: relative;
+  border: 1px solid #7319c4;
+  margin: .5rem .6rem;
+  font-size: .3rem;
+  box-sizing: border-box;
+  padding: .3rem;
+  text-align: center;
+  color: #fff;
+  line-height: .5rem;
+}
+.container .award-panel span {
+  color: #ffa109;
+}
+.container .award-panel .award-title {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  padding: 0 10px;
+  background: #23043f;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #7319c4;
+}
+.left {
+  margin-left: 1rem;
+}

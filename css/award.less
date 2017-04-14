@@ -1,0 +1,273 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: #23043f;
+}
+
+body{
+  font-family: PingFang;
+  position: relative;
+  &.modal{
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+
+.cm-toast {
+  position: fixed;
+  left: 0;
+  bottom: 8%;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+
+  .cm-toast-main {
+    display: inline-block;
+    max-width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    min-width: 60px;
+  }
+
+}
+//遮罩
+.modal-in{
+  display: none;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 99;
+  .msg-small{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 49%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 4rem;
+    height:2.6rem;
+    border-radius: .2rem;
+    overflow: hidden;
+    .modal-msg{
+      font-size:.24rem;
+      text-align: center;
+      .msg{
+        height:auto;
+        color: #ffffff;
+        padding: .55rem .3rem;
+        background: #FFA109;
+      }
+      button{
+        font-size:.3rem;
+        text-align: center;
+        width: 100%;
+        height:.8rem;
+        border: none;
+        background: #ffffff;
+        outline: none;
+        color: #FFA109;
+      }
+    }
+  }
+  .question,.answer{
+    text-align: left;
+  }
+  .answer label{
+    font-size: .28rem;
+  }
+  .answer input{
+    margin-left: .3rem;
+  }
+  .msg-li{
+    width: 100%;
+    height:auto;
+    margin-top: .3rem;
+  }
+  .msg-big{
+    display: none;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 7.1rem;
+    height:auto;
+    border-radius: .2rem;
+    .msg-title{
+      position: absolute;
+      top: -1.8rem;
+      z-index: 999;
+      width: 100%;
+      text-align: center;
+      font-size: .4rem;
+      color: #ffffff;
+      height:3.28rem;
+      background: url("../images/congra.png") no-repeat;
+      background-size: 100% auto;
+      line-height: 3.2rem;
+      span{
+        //line-height: rem;
+      }
+    }
+    .modal-msg{
+      margin: auto;
+      padding-bottom: .3rem;
+      width: 80%;
+      background:#FFE5BB;
+      border-radius: .2rem;
+      .msg{
+        padding-top: 1rem;
+        padding-left: .4rem;
+        padding-right: .4rem;
+        height: auto;
+        font-size: .3rem;
+        color: #6F0000;
+        text-align: center;
+      }
+      .modal-foot{
+        padding-left: .3rem;
+        a{
+          color:#6F0000 ;
+          font-size: .28rem;
+          margin-right: .3rem;
+        }
+        button{
+          width: 2.91rem;
+          height:.88rem;
+          font-size:.4rem;
+          text-align: center;
+          border: none;
+          outline: none;
+          color: #ffffff;
+          background: url("../images/radius.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+
+    }
+  }
+}
+@award-width : 6.5rem;
+
+.container{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  background: url('../images/main_bg.jpg') no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 1rem;
+
+  .top-header{
+    padding: .6rem 1rem .1rem 1rem;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  #my-award{
+    margin: .3rem .6rem;
+    padding: .15rem;
+    text-align: center;
+    //display: none;
+    color: #fff;
+    font-size: .3rem;
+    line-height: .4rem;
+
+    span{
+      color: #ffa109;
+    }
+
+
+
+    #award-tips{
+      color: #fff;
+      font-size: .16rem;
+      line-height: .3rem;
+    }
+  }
+
+
+  .award-con{
+    position: relative;
+    width: @award-width;
+    height: @award-width;
+    overflow: hidden;
+    margin: 0 auto;
+
+    .award-bg{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: @award-width;
+      height: @award-width;
+    }
+
+    .award-pointer{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      width: 20%;
+      -webkit-transform: translate(-50%,-55%);
+      -moz-transform: translate(-50%,-55%);
+      transform: translate(-50%,-55%);
+    }
+
+    .award-rule{
+      position: absolute;
+      right: .3rem;
+      top: .2rem ;
+      font-size: .24rem;
+      color: #ffc027;
+    }
+  }
+
+
+  .award-panel{
+    position: relative;
+    border: 1px solid #7319c4;
+    margin: .5rem .6rem;
+    font-size: .3rem;
+    box-sizing: border-box;
+    padding: .3rem;
+    text-align: center;
+    color: #fff;
+    line-height: .5rem;
+
+    span{
+      color: #ffa109;
+    }
+
+    .award-title{
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      padding: 0 10px;
+      background: #23043f;
+
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      color: #7319c4;
+    }
+  }
+
+}
+.left{
+  margin-left: 1rem;
+}
+

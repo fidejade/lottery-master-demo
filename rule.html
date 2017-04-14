@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="robots" content="all">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/rule.css">
+    <title>活动规则</title>
+</head>
+<script>
+    function setRemFontSize() {
+        var remSize = window.innerWidth / 7.5;
+        document.querySelector("html").style.fontSize = (remSize > 100 ? 100 : remSize) + "px";
+    }
+    setRemFontSize();
+    window.addEventListener("resize", function () {
+        setTimeout(function () {
+            setRemFontSize();
+        }, 200)
+    });
+</script>
+<body>
+ <div class="container">
+
+ </div>
+</body>
+</html>
